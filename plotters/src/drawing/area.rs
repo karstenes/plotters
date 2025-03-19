@@ -117,7 +117,7 @@ impl Rect {
 /// 2. Coordinate Translation - Allows guest coordinate system attached and used for drawing.
 /// 3. Element based drawing - drawing area provides the environment the element can be drawn onto it.
 pub struct DrawingArea<DB: DrawingBackend, CT: CoordTranslate> {
-    backend: Rc<RefCell<DB>>,
+    pub backend: Rc<RefCell<DB>>,
     rect: Rect,
     coord: CT,
 }
