@@ -133,7 +133,7 @@ impl<'a, P: PixelFormat> BitMapBackend<'a, P> {
     }
 
     #[inline(always)]
-    pub(crate) fn get_raw_pixel_buffer(&mut self) -> &mut [u8] {
+    pub fn get_raw_pixel_buffer(&mut self) -> &mut [u8] {
         self.buffer.borrow_buffer()
     }
 
